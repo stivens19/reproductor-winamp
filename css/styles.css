@@ -1,0 +1,144 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.winamp{
+    background: rgba(56, 56, 56, 0.384);
+    width: 100%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+.ancho{
+    width: 75%;
+}
+.img-header{
+    width: 100%;
+    display:block;
+    
+}
+.container{
+    display: flex;
+}
+.flex-item{
+    flex: 0 1 calc(50% - 1rem);
+    display:flex;
+    
+}
+.description{
+    height: 100px;
+    background: rgb(45, 47, 63);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: solid 1px rgb(128, 127, 127);
+}
+.time{
+    flex-basis: 30%;
+    height: 80%;
+    background: #000;
+    margin-left: 10px;
+}
+.music-description{
+    flex-basis: 70%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.name-music{
+    width: 90%;
+    color:rgb(3, 216, 3);
+    font-size: 12px;
+    background: #000;
+    padding: 4px;
+    padding-left: 10px;
+    border-radius: 2px;
+}
+.musica-reproduciendo{
+    width: 90%;
+    height: 5px;
+    background: rgb(3, 216, 3);
+    
+}
+.barra{
+    height: 10px;
+    background: rgba(36, 46, 58, 0.568);
+    border: solid 2px rgb(112, 112, 112);
+}
+
+.controls{
+    height: 50px;
+    background: rgb(45, 47, 63);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.btn{
+    display: inline-block;
+    height: 25px;
+    width: 30px;
+   
+}
+.btn-back{
+    margin-left: 20px;
+    background: url("../assets/img/btn-prev.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+
+.btn-play{
+    background: url("../assets/img/btn-play.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.btn-pause{
+    background: url("../assets/img/btn-pause.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.btn-stop{
+    background: url("../assets/img/btn-reset.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.btn-next{
+    background: url("../assets/img/btn-next.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.btn-playlist{
+    background: url("../assets/img/btn-playlist.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-left: 20px;
+}
+.logo-winamp{
+    display: block;
+    margin-right: 20px;
+}
+.winamp-music{
+    background: rgb(36, 46, 58);
+}
+.music-enlace{
+    text-decoration: none;
+    font-size: 12px;
+    color:rgb(3, 216, 3);
+    letter-spacing: 1px;
+}
+.winamp-playlist-music{
+    background: #000;
+    width: 98%;
+    margin-top:5px;
+    margin: auto;
+    height: 65vh;
+    margin-bottom: 5px;
+    overflow: scroll;
+    padding-left: 20px;
+    color:rgb(3, 216, 3);
+}
