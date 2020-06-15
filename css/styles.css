@@ -3,6 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    background: rgb(53, 52, 52);
+}
 .winamp{
     background: rgba(56, 56, 56, 0.384);
     width: 100%;
@@ -20,6 +23,16 @@
 }
 .container{
     display: flex;
+}
+@media screen and (max-width: 720px) {
+  .container{
+      flex-direction: column;
+  }
+}
+@media screen and (max-width: 450px) {
+  .ancho{
+      width: 100%;
+  }
 }
 .flex-item{
     flex: 0 1 calc(50% - 1rem);
@@ -39,7 +52,14 @@
     height: 80%;
     background: #000;
     margin-left: 10px;
+    text-align: center;
 }
+.time-music{
+    color:rgb(3, 216, 3);
+    font-size: 62px;
+
+}
+
 .music-description{
     flex-basis: 70%;
     height: 80%;
@@ -80,7 +100,8 @@
     display: inline-block;
     height: 25px;
     width: 30px;
-   
+    cursor: pointer;
+    background: rgb(185, 185, 183)
 }
 .btn-back{
     margin-left: 20px;
@@ -130,6 +151,9 @@
     font-size: 12px;
     color:rgb(3, 216, 3);
     letter-spacing: 1px;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
 }
 .winamp-playlist-music{
     background: #000;
@@ -138,7 +162,152 @@
     margin: auto;
     height: 65vh;
     margin-bottom: 5px;
-    overflow: scroll;
-    padding-left: 20px;
+    overflow-y: scroll;
+    padding-left: 10px;
+    padding-right:10px ;
     color:rgb(3, 216, 3);
+    
+}
+
+.winamp-playlist-music::-webkit-scrollbar {
+    width: 6px;
+}
+.winamp-playlist-music::-webkit-scrollbar-track {
+    background-color: #d3bb32;
+} 
+.winamp-playlist-music::-webkit-scrollbar-thumb {
+    background-color: rgba(136, 134, 134, 0.2); 
+} 
+
+.winamp-playlist-music::-webkit-scrollbar-button {
+    background-color: #838282a6;
+} 
+
+.winamp-playlist-music::-webkit-scrollbar-corner {
+    background-color: rgb(100, 99, 99);
+}
+.music{
+   margin-left: 10px;
+   margin-top: 0;
+   margin-bottom: 0;
+   
+}
+.music:hover{
+    background: rgba(135, 230, 26, 0.288);
+}
+.music a{
+    display: block;
+}
+.eliminar-musica{
+    color:rgb(3, 216, 3);
+    font-size: 15px;
+    text-decoration: none;
+}
+
+#files,#files2,#files-dir{
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+.l-files{ 
+    background:url(../assets/img/btn-playlist.jpg);
+    background-repeat:no-repeat;
+    display: inline-block;
+    transition: all .5s;
+    cursor: pointer;
+    padding: 15px 40px !important;
+    margin-left: 30px;
+    width: fit-content;
+    text-align: center;
+}
+.winamp{
+    position: relative;
+}
+.controles-files{
+    position: absolute;
+    bottom: 0;
+    height: 53px;
+    background: rgb(36, 46, 58);
+    border-radius:3px;
+
+}
+.sin-desplegar{
+    display: none;
+    
+}
+.controles-files-desplegable{
+    display: flex;
+    flex-direction: column;
+    margin-top: 4px;
+}
+.btn-desplegar,.btn-desplegar-rem{
+    margin-top: 10px;
+    margin-left: 10px;
+    color: #000000;
+    font-size: 10px;
+    position: absolute;
+    bottom: 0;
+}
+.btn-desplegar:hover,.btn-desplegar-rem:hover{
+    background: rgb(88, 88, 88);
+}
+.l-file{
+    background: rgb(185, 185, 183);
+    display: inline-block;
+    font-size: 7px;
+    width: 25px;
+    padding: 3px;
+    border-radius: 5px;
+}
+.l-file:hover{
+    background: rgb(88, 88, 88);
+    cursor: pointer;
+}
+.btn-desplegar-rem{
+    margin-left: 50px;
+}
+.s-d-m{
+    margin-left: 45px;
+}
+.btn-rem{
+    font-size: 7px;
+    padding: 3px;
+}
+.color-seleccionado{
+    background: rgba(240, 67, 24, 0.404);
+}
+.color-tocando{
+    background: rgba(49, 236, 32, 0.404);
+}
+.flex-item{
+    flex-direction: column;
+    justify-content: center;
+}
+.participantes{
+    background: rgb(80, 65, 114);
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.participantes li{
+    padding-left: 5px;
+    list-style: none;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    border-bottom: solid .3px #fff;
+    cursor: pointer;
+    font-size: 23px;
+}
+.participantes li:first-child{
+    background: rgba(0, 233, 39, 0.575);
+    justify-content: center;
+    font-size: 40px;
+    text-transform: uppercase;
+}
+.participantes li:hover{
+    background: rgba(233, 232, 232, 0.466);
 }
